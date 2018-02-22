@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -30,7 +30,7 @@
       <!-- Inicio Datos Generales -->
       <br><br><br>
       <h3 class="center-align">Datos Generales</h3>    
-      <form class="col s12" method="POST" action="/company">
+      <form class="col s12" method="POST" action="/company" action="/action_page.php">
         {{ csrf_field() }}
         <div class="row">
           <div class="input-field col s6">
@@ -38,89 +38,89 @@
             <label for="business">Razon Social</label>
           </div>
           <div class="input-field col s6">
-            <input id="business_rut" name="business_rut" type="text" data-length="10">
+            <input id="business_rut" name="business_rut" type="text" data-length="10" required>
             <label for="business_rut">Rut</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input id="representative" name="representative" type="text" class="validate">
+            <input id="representative" name="representative" type="text" class="validate" required>
             <label for="representative">Representate Legal</label>
           </div>
 
           <div class="input-field col s6">
-             <input id="representative_rut" name="representative_rut" type="text" data-length="10">
+             <input id="representative_rut" name="representative_rut" type="text" data-length="10" required>
             <label for="representative_rut">Rut</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input  id="item" name="item" type="text" class="validate">
+            <input  id="item" name="item" type="text" class="validate" required>
             <label for="item">Giro</label>
           </div>
 
           <div class="input-field col s6">
-            <input id="county" name="county" type="text" class="validate">
+            <input id="county" name="county" type="text" class="validate" required>
             <label for="county">Comuna</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input id="address" name="address" type="text" class="validate">
+            <input id="address" name="address" type="text" class="validate" required>
             <label for="address">Dirección</label>
           </div>
         
           <div class="input-field col s6">
-            <input id="schedule" name="schedule" type="text" class="validate">
+            <input id="schedule" name="schedule" type="text" class="validate" required>
             <label for="schedule">Horarios Visita</label>
           </div> 
         </div>
 
         <div class="row">
           <div class="input-field col s4">
-            <input  id="phone" name="phone" type="text" class="validate">
+            <input  id="phone" name="phone" type="text" class="validate" required>
             <label for="phone">Teléfono</label>
           </div>
          
           <div class="input-field col s4">
-            <input id="celphone" name="celphone" type="text" class="validate">
+            <input id="celphone" name="celphone" type="text" class="validate" required>
             <label for="celphone">Celular</label>
           </div>
 
           <div class="input-field col s4">
-            <input id="speciality" name="speciality" type="text" class="validate">
+            <input id="speciality" name="speciality" type="text" class="validate" required>
             <label for="speciality">Especialidad</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input  id="doctor" name="doctor" type="text" class="validate">
+            <input  id="doctor" name="doctor" type="text" class="validate" required>
             <label for="doctor">Médico</label>
           </div>
           
           <div class="input-field col s6">
-            <input id="email" name="email" type="email" class="validate">
+            <input id="email" name="email" type="email" class="validate" required>
             <label for="email">Email</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s4">
-            <input id="contact" name="contact" type="text" class="validate">
+            <input id="contact" name="contact" type="text" class="validate" required>
             <label for="contact">Contacto</label>
           </div>
           
           <div class="input-field col s4">
-             <input  id="contact_phone" name="contact_phone" type="text" class="validate">
+             <input  id="contact_phone" name="contact_phone" type="text" class="validate" required>
             <label for="contact_phone">Celular</label>
           </div>
           
           <div class="input-field col s4">
-            <input id="contact_mail" name="contact_mail" type="email" class="validate">
+            <input id="contact_mail" name="contact_mail" type="email" class="validate" required>
             <label for="contact_mail">Email</label>
           </div>
         </div>
@@ -131,22 +131,22 @@
         <h3 class="center-align">Datos de la Sociedad</h3> 
         <div class="row">
           <div class="input-field col s4">
-            <input id="partner_name" name="partner_name" type="text" class="validate">
+            <input id="partner_name" name="partner_name" type="text" class="validate" required>
             <label for="partner_name">Nombre</label>
           </div>
 
           <div class="input-field col s2">
-            <input id="partner_percentage" name="partner_percentage" type="text" class="validate">
+            <input id="partner_percentage" name="partner_percentage" type="text" class="validate" required>
             <label for="partner_percentage">Porcentaje</label>
           </div>
 
           <div class="input-field col s2">
-            <input id="partner_rut" name="partner_rut" type="text" class="validate">
+            <input id="partner_rut" name="partner_rut" type="text" class="validate" required>
             <label for="partner_rut">Rut</label>
           </div>
 
           <div class="input-field col s2">
-            <input id="partner_sii" name="partner_sii" type="text" class="validate">
+            <input id="partner_sii" name="partner_sii" type="text" class="validate" required>
             <label for="partner_sii">SII</label>
           </div>
 
@@ -162,32 +162,32 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input id="ingress" name="ingress" type="text" class="validate">
+            <input id="ingress" name="ingress" type="text" class="validate" required>
             <label for="ingress">Fecha de Ingreso de Cliente</label>
           </div>
      
           <div class="input-field col s6">
-            <input id="executive" name="executive" type="text" class="validate">
+            <input id="executive" name="executive" type="text" class="validate" required>
             <label for="executive">Ejecutivo a cargo</label>
           </div>
         </div>
 
         <div class="row">
             <div class="input-field col s6">
-              <input id="schedule" name="schedule" type="text" class="validate">
+              <input id="schedule" name="schedule" type="text" class="validate" required>
               <label for="schedule">Honorario Mes</label>
             </div>
 
             <div class="input-field col s6">
-              <input id="honorary" name="honorary" type="text" class="validate">
+              <input id="honorary" name="honorary" type="text" class="validate" required>
               <label for="honorary">Honorario Renta</label>
             </div>
         </div>
       
         <div class="row">
           <div class="input-field col s6">
-            <select name="payment">
-              <option value="" disabled selected>Elige una Opcion</option>
+            <select required name="payment" >
+              <option value="" disabled selected>Elige una Opcion</option required>
               <option value="1">Transferencia</option>
               <option value="2">Cheque</option>
             </select>
@@ -195,35 +195,35 @@
           </div>
       
           <div class="input-field col s6">
-            <input id="key_sii" name="key_sii" type="text" class="validate">
+            <input id="key_sii" name="key_sii" type="text" class="validate" required>
             <label for="key_sii">Clave SII</label>
           </div>
         </div>
       
         <div class="row">
           <div class="input-field col s6">
-            <select name="remuneration">
+            <select name="remuneration" required>
               <option value="" disabled selected>Elige una Opcion</option>
-              <option value="1">Transferencia</option>
+              <option required value="1">Transferencia</option>
               <option value="2">Cheque</option>
             </select>
             <label>Remuneración</label>
           </div>
 
           <div class="input-field col s6">
-            <input id="key_previred" name="key_previred" type="text" class="validate">
+            <input id="key_previred" name="key_previred" type="text" class="validate" required>
             <label for="key_previred">Clave PreviRed</label>
           </div>
         </div>
        
         <div class="row">     
           <div class="input-field col s6">
-            <input id="amount" name="amount" type="text" class="validate">
+            <input id="amount" name="amount" type="text" class="validate" required>
             <label for="amount">Cantidad Liquida</label>
           </div>
 
           <div class="input-field col s6">
-            <select name="tax">
+            <select name="tax" required>
               <option value="" disabled selected>Elige una Opcion</option>
               <option value="1">Afecta</option>
               <option value="2">Exenta</option>
@@ -234,7 +234,7 @@
 
         <div class="row">     
           <div class="input-field col s6">
-            <select name="remuneration_type">
+            <select name="remuneration_type" required>
               <option value="" disabled selected>Elige una Opcion</option>
               <option value="1">Casa Particular</option>
               <option value="2">Independiente</option>
@@ -244,7 +244,7 @@
           </div>
 
           <div class="input-field col s6">
-            <select name="billing">
+            <select name="billing" required>
               <option value="" disabled selected>Elige una Opcion</option>
               <option value="1">Electrónica</option>
               <option value="2">Manual</option>
@@ -255,7 +255,7 @@
 
         <div class="row">
           <div class="input-field col s6">
-            <select name="ticket">
+            <select name="ticket" required>
               <option value="" disabled selected>Elige una Opcion</option>
               <option value="1">Si</option>
               <option value="2">No</option>
@@ -284,7 +284,7 @@
 
         <div class="row">
           <div class="input-field col s6">
-            <select name="ticket_monthly">
+            <select name="ticket_monthly" required>
               <option value="" disabled selected>Elige una Opcion</option>
                 <option value="1">Optimice</option>
                 <option value="2">Clienete</option>
@@ -293,7 +293,7 @@
           </div>
 
           <div class="input-field col s6">
-            <select name="complexity">
+            <select name="complexity" required>
               <option value=""selected>Elige una Opcion</option>
               <option value="1">A</option>
               <option value="2">B</option>
@@ -306,7 +306,7 @@
         <div class="row">
           <div class="input-field col s12">
             <textarea name="observations" id="textarea1" class="materialize-textarea" data-length="1000"></textarea>
-            <label for="textarea1">OBSERVACIONES</label>
+            <label for="textarea1">Observaciones</label>
           </div>
         </div>
 
@@ -400,13 +400,26 @@
     ampmclickable: true, // make AM PM clickable
     aftershow: function(){} //Function for after opening timepicker
   });
-   </script>
-   <script>
+  </script>
+  <script>
     $(document).ready(function() {
     $('select').material_select();
-  });
+    });
         
-   </script>
+  </script>
+
+  <script>
+    $(document).ready(function() {
+    $('select').material_select();
+    $("select[required]").css({position: 'absolute', display: 'inline', height: 0, padding: 0, width: 0});
+    });
+  </script>
+
+  <script>
+
+
+
+  </script>
 
 
   </body>

@@ -57,10 +57,22 @@
         @endforeach
       </tbody>
     </table>
-    <div class="center-alig">
-    <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-    </div>
+
+
+    <br><br><br><br>
+
+    <div class="right-align">
+      <a href="create" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
+    </div> 
+
+    <br><br><br><br>
+
+
+
+ 
   </div>
+
+
  
 
   <footer class="page-footer teal">

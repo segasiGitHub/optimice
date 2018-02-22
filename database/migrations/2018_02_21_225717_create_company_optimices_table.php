@@ -33,7 +33,7 @@ class CreateCompanyOptimicesTable extends Migration
             $table->boolean('attention_visit'); //Atencion A cliente
             $table->string('ticket_monthly');   //Boleta Mensuales
             $table->string('complexity');       //Grado de complejidad
-            $table->text('observations');     //observaciones
+            $table->text('observations')->nullable();     //observaciones
             $table->timestamps();
         });
     }
