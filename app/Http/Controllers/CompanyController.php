@@ -8,47 +8,33 @@ use App\Partner;
 use App\CompanyOptimice;
 use App\Helper;
 
-class CompanyController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+class CompanyController extends Controller {
+
+    public function index() {
         $companies = Company::all();
         //dd($companies);
         return view('company.index', compact('companies'));
     }
 
-
-    public function create()
-    {
+    public function create() {
         return view('company.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //dd($request->all());
         $company = Company::create(request(['business','business_rut','representative','representative_rut','item','county','address',
                                     'schedule','phone','celphone','speciality','doctor','email','contact','contact_phone','contact_mail']));
         
-        
-        Partner::create([
-            'company_id' => $company->id,
-            'name' => request('partner_name'),
-            'percentage' => request('partner_percentage'),
-            'rut' => request('partner_rut'),
-            'sii' => request('partner_sii')           
-        ]);                            
-        
+        foreach($request->partners as $partner) {
+            Partner::create([
+                'company_id' => $company->id,
+                'name' => $partner['name'],
+                'percentage' => $partner['percentage'],
+                'rut' => $partner['rut'],
+                'sii' => $partner['sii']
+            ]); 
+        }                                    
+
         $attention_mail = false;
         if (request('attention_mail') == 'on') $attention_mail = true;
 
@@ -76,30 +62,17 @@ class CompanyController extends Controller
             'complexity' => request('complexity'),
             'observations' => request('observations')
         ]); 
-        
-
-
+   
         return redirect('/company');
-
-    
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Company $company)
-    {
+    public function show(Company $company) {
         //dd($id);
         return view('company.show', compact('company'));
     }
 
-    public function edit(Company $company){
+    public function edit(Company $company) {
         //dd($company);
         return view('company.edit', compact('company'));
     }
-
-  
 }
