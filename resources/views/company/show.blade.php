@@ -43,57 +43,129 @@
   <tbody>
     <tr>
       <td>Razón Social</td>
-      <td colspan="2">Prestaciones Médicas Miranda Limitada</td>
+      <td colspan="2">{{ $company->business }}</td>
       <td>RUT</td>
-      <td colspan="2">76.182.308-8</td>
+      <td colspan="2">{{ App\Helper::rut(str_replace('-','',$company->business_rut)) }}</td>
     </tr>
     <tr>
       <td>Representate Legal</td>
-      <td colspan="2">Mónica Andrea López Hernando</td>
+      <td colspan="2">{{ $company->representative }}</td>
       <td>RUT</td>
-      <td colspan="2">15.312.027-7</td>
+      <td colspan="2">{{ App\Helper::rut(str_replace('-','',$company->representative_rut)) }}</td>
     </tr>
     <tr>
       <td>Giro</td>
-      <td colspan="2">Servicios Médicos e Inversiones</td>
+      <td colspan="2">{{ $company->item }}</td>
       <td>Comuna</td>
-      <td colspan="2">Santiago</td>
+      <td colspan="2">{{ $company->county }}</td>
     </tr>
     <tr>
       <td>Dirección</td>
-      <td colspan="2">Ramón Corvalan 37 Oficina 228</td>
+      <td colspan="2">{{ $company->address }}</td>
       <td>Horarios Visita</td>
-      <td colspan="2">Vía Mail</td>
-    </tr>
+      <td colspan="2">{{ $company->schedule}}</td>
+    </tr> 
     <tr>
-      <td>Teléfono</td>
-      <td>-</td>
+      <td>Telefono</td>
+      <td>{{ $company->phone}}</td>
       <td>Celular</td>
-      <td>56982484614</td>
+      <td>{{ $company->celphone}}</td>
       <td>Especialidad</td>
-      <td>Sicología</td>
+      <td>{{ $company->speciality}}</td>
     </tr>
     <tr>
       <td>Médico</td>
-      <td colspan="2">Mónica Andrea López Hernando</td>
+      <td colspan="2">{{ $company->doctor }}</td>
       <td>Mail</td>
-      <td colspan="2">-</td>
+      <td colspan="2">{{ $company->email }}</td>
     </tr>
     <tr>
       <td>Contacto</td>
-      <td>-</td>
+      <td>{{ $company->contact }}</td>
       <td>Celular</td>
-      <td>-</td>
+      <td>{{ $company->contact_phone }}</td>
       <td>Mail</td>
-      <td>-</td>
+      <td>{{ $company->contact_mail }}</td>
     </tr>
   </tbody>
 </table>
 
 </div> 
 
-  </div>
+</div>
  
+  <br><br>
+
+  <!-- Inicio Datos de la Sociedad -->
+  <div class="container">
+    <div class="section">
+
+      <table class="bordered highlight">
+        <thead>
+          <tr>
+            <th class="center-align" colspan="6">Datos de la Sociedad</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Nombre</td>
+            <td colspan="2">{{ $company->partner_name }}</td>
+            <td>Porcentaje</td>
+            <td colspan="2">{{ $company->partner_percentage }}</td>
+            <td>RUT</td>
+            <td colspan="2">{{ App\Helper::rut(str_replace('-','',$company->partner_partner_rut)) }}</td>
+            <td>SII</td>
+            <td colspan="2">{{ $company->partner_sii }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div> 
+  </div> 
+  <!-- End Datos de la Sociedad -->
+
+  <br><br>
+
+  <!-- Inicio de formulario DATOS OPTIMICE -->
+  <div class="container">
+    <div class="section">
+
+      <table class="bordered highlight">
+        <thead>
+          <tr>
+            <th class="center-align" colspan="6">Datos Optimice</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Nombre</td>
+            <td colspan="2">{{ $company->partner_name }}</td>
+            <td>Porcentaje</td>
+            <td colspan="2">{{ $company->partner_percentage }}</td>
+            <td>RUT</td>
+            <td colspan="2">{{ App\Helper::rut(str_replace('-','',$company->partner_partner_rut)) }}</td>
+            <td>SII</td>
+            <td colspan="2">{{ $company->partner_sii }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div> 
+  </div>
+  <!-- fin de formulario DATOS OPTIMICE --> 
+
+
+
+
+
+
+
+
+
 
   <footer class="page-footer teal">
     <div class="container">
@@ -133,9 +205,12 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
-   <script src="js/init.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/init.js"></script>  
+  
+
+
 
    <script>
        

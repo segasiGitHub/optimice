@@ -24,7 +24,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse black-text"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
+<main>
   <br><br><br>
 
   <h3 class="center-align">Datos Generales</h3>
@@ -50,6 +50,7 @@
               
             <td><a href="/company/{{ $company->id }}">{{ $company->business }}</a>    </td>
             <td>{{ $company->business_rut }}</td>
+            <td><a href="/company/edit/{{$company->id}}"><i class="material-icons">edit</i></a></td>
               
 
           </tr>
@@ -58,58 +59,24 @@
       </tbody>
     </table>
 
-
-    <br><br><br><br>
-
-    <div class="right-align">
+</div>
+ 
+ </main>
+ <div class="container">
+   <div class="right-align">
       <a href="create" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
     </div> 
-
-    <br><br><br><br>
-
-
+    <br>  
+</div>
 
  
-  </div>
-
-
- 
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
+   
+    <div class="footer-copyright teal">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by <a class="brown-text text-lighten-3" href="http://segasi.cl">segasi</a>
       </div>
     </div>
-  </footer>
+  
 
 
   <!--  Scripts-->

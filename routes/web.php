@@ -11,17 +11,30 @@
 |
 */
 
+
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/company', 'CompanyController@index');
 Route::get('/create', 'CompanyController@create');
+/*Route::get('/company', 'CompanyController@index');
 Route::post('/company', 'CompanyController@store');
 Route::get('/company/{id}', 'CompanyController@show');
-
-
+*/
+Route::prefix('/company')->group(function () {
+    Route::get('/', 'CompanyController@index');
+    Route::post('/', 'CompanyController@store');
+    Route::get('/{company}', 'CompanyController@show');
+    Route::get('/edit/{company}', 'CompanyController@edit');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'CompanyController@index')->name('home');
+
+
+

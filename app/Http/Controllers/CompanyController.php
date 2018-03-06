@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Company;
 use App\Partner;
 use App\CompanyOptimice;
+use App\Helper;
 
 class CompanyController extends Controller
 {
@@ -89,10 +90,15 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Company $company)
     {
         //dd($id);
-        return view('company.show');
+        return view('company.show', compact('company'));
+    }
+
+    public function edit(Company $company){
+        //dd($company);
+        return view('company.edit', compact('company'));
     }
 
   
